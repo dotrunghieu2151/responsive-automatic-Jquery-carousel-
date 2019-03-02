@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    font-family: 'Caveat', cursive;
+}
+html {
+-webkit-tap-highlight-color: transparent; /* prevent blue highlighting when using touch events only works in chrome tho*/
+}
+.image-slider-wrapper {
+    width:80%;
+    margin: 5px auto;
+    height: 800px;
+    -webkit-box-shadow: 0px 0px 20px 10px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 20px 10px rgba(0,0,0,1);
+    box-shadow: 0px 0px 20px 10px rgba(0,0,0,1);
+    overflow:hidden;
+    position:relative;
+}
+.image-slider-inner {
+    width:100%;
+    height:90%;
+    position:relative;
+}
+.image-slider-item {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.image-slider-item:not(:nth-child(1)) {
+  display:none;
+}
+.image-slider-item img {
+    width:100%;
+    height:100%;
+}
+.slider-image-indicator {
+    width:100%;
+    height:10%;
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+   
+}
+.slider-image-indicator img {
+    width:100%;
+    height:100%;
+    transition: opacity 0.5s;
+    object-fit: cover;
+}
+.slider-image-indicator img:hover {
+    cursor:pointer /* hover cursor to prevent blue highlighting when using touch event */
+}
+.slider-image-indicator img:not(:nth-child(1)) {
+    opacity:0.6;
+}
+.slider-caption {
+    position:absolute;
+    bottom:10%;
+    left:50%;
+    transform: translateX(-50%);
+}
+.caption {
+    font-size:50px;
+    color:white;
+    text-shadow:black 0px 0px 10px;
+    text-align:center;
+}
+.slider-control {
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    background:transparent;
+    border:none;
+    outline:none;
+    color:white;
+    opacity:0.2;
+    text-shadow:black 0px 0px 10px;
+    height:100%;
+    font-size:60px;
+    padding:10px;
+}
+.slider-control:hover {
+    cursor:pointer;
+}
+#prevButton:hover {
+    opacity:1;
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.21) 68%, rgba(0,0,0,0.01) 99%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.21) 68%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.21) 68%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+}
+#nextButton:hover {
+    opacity:1;
+    background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 */
+}
+#prevButton {
+    left:0px;
+}
+#nextButton {
+    right:0px;
+}
+.slider-indicators {
+    position:absolute;
+    bottom:5%;
+    left:50%;
+    transform: translateX(-50%);
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap:5px;
+}
+.slider-indicator {
+    height:10px;
+    width:50px;
+    cursor:pointer;
+    background:white;
+    border:none;
+    outline:none;
+    transition: opacity 0.5s;
+}
+.slider-indicator:not(:nth-child(1)) {
+    opacity:0.5;
+}
+.pause-unpause-button {
+    position: absolute;
+    top:1%;
+    left:5%;
+}
+.pause-unpause-button img {
+    width:50px;
+    height:50px;
+}
+.pause-unpause-button img:hover {
+    cursor:pointer;
+}
+@media screen and (max-width:480px) {
+    .caption {
+        font-size: 30px;
+    }
+    .slider-control {
+        font-size:30px;
+    }
+    .pause-unpause-button img {
+        width:30px;
+        height:30px;
+    }
+}
+@media screen and (max-height: 850px) {
+    .image-slider-wrapper {
+        height:95vh;
+    }
+}
+@media screen and (max-height:400px) {
+     .caption {
+        font-size: 25px;
+    }
+}
+

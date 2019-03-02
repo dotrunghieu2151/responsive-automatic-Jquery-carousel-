@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Responsive Image Slider(2nd attempt)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="animation.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="image-slider-wrapper">
+            <div class="image-slider-inner">
+                <div class="image-slider-item">
+                    <picture>
+                        <source media="(max-width:601px)" srcset="img/me.jpg">
+                        <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1000">
+                        <img src="http://unsplash.it/3440/1440/?img=1000">
+                    </picture>
+                    <div class="slider-caption">
+                        <p class="caption animated rotateIn ">Created by Do Trung Hieu</p>
+                    </div>
+                </div>
+                <div class="image-slider-item">
+                    <picture>
+                        <source media="(max-width:601px)" srcset="http://unsplash.it/800/600/?img=1001">
+                        <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1001">
+                        <img src="http://unsplash.it/3440/1440/?img=1001">
+                    </picture>
+                    <div class="slider-caption">
+                        <p class="caption animated lightSpeedIn ">Caption 2</p>
+                    </div>
+                </div>
+                <div class="image-slider-item">
+                    <picture>
+                        <source media="(max-width:601px)" srcset="http://unsplash.it/800/600/?img=1002">
+                        <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1002">
+                        <img src="http://unsplash.it/3440/1440/?img=1002">
+                    </picture>
+                    <div class="slider-caption">
+                        <p class="caption animated fadeInUp">Caption 3</p>
+                    </div>
+                </div>
+                <div class="image-slider-item">
+                    <picture>
+                        <source media="(max-width:601px)" srcset="http://unsplash.it/800/600/?img=1003">
+                        <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1003">
+                        <img src="http://unsplash.it/3440/1440/?img=1003">
+                    </picture>
+                    <div class="slider-caption">
+                        <p class="caption animated zoomIn  ">Caption 4</p>
+                    </div>
+                </div>
+                <div class="image-slider-item">
+                    <picture>
+                        <source media="(max-width:601px)" srcset="http://unsplash.it/800/600/?img=1004">
+                        <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1004">
+                        <img src="http://unsplash.it/3440/1440/?img=1004">
+                    </picture>
+                    <div class="slider-caption">
+                        <p class="caption animated bounceInDown">Caption 5</p>
+                    </div>
+                </div>
+                <div class="image-slider-item">
+                    <picture>
+                        <source media="(max-width:601px)" srcset="http://unsplash.it/800/600/?img=1005">
+                        <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1005">
+                        <img src="http://unsplash.it/3440/1440/?img=1005">
+                    </picture>
+                    <div class="slider-caption">
+                        <p class="caption animated flipInX ">Caption 6</p>
+                    </div>
+                </div>
+                <!-- controler -->
+                <button class="slider-control" id="prevButton">&lt;</button>
+                <button class="slider-control" id="nextButton">&GT;</button>
+                <!-- indicator -->
+                <div class="slider-indicators">
+                    <button class="slider-indicator"></button>
+                    <button class="slider-indicator"></button>
+                    <button class="slider-indicator"></button>
+                    <button class="slider-indicator"></button>
+                    <button class="slider-indicator"></button>
+                    <button class="slider-indicator"></button>
+                </div>
+            </div>
+            <!-- image indicator -->
+            <div class="slider-image-indicator">
+                <picture>
+                    <source media="(max-width:601px)" srcset="img/me.jpg">
+                    <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1000">
+                    <img src="http://unsplash.it/3440/1440/?img=1000">
+                </picture>
+                <picture>
+                    <source media="(max-width:601px)" srcset="http://unsplash.it/800/600/?img=1001">
+                    <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1001">
+                    <img src="http://unsplash.it/3440/1440/?img=1001">
+                </picture>
+                <picture>
+                    <source media="(max-width:601px)" srcset="http://unsplash.it/800/600/?img=1002">
+                    <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1002">
+                    <img src="http://unsplash.it/3440/1440/?img=1002">
+                </picture>
+                <picture>
+                    <source media="(max-width:601px)" srcset="http://unsplash.it/800/600/?img=1003">
+                    <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1003">
+                    <img src="http://unsplash.it/3440/1440/?img=1003">
+                </picture>
+                <picture>
+                    <source media="(max-width:601px)" srcset="http://unsplash.it/800/600/?img=1004">
+                    <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1004">
+                    <img src="http://unsplash.it/3440/1440/?img=1004">
+                </picture>
+                <picture>
+                    <source media="(max-width:601px)" srcset="http://unsplash.it/800/600/?img=1005">
+                    <source media="(max-width:1025px)" srcset="http://unsplash.it/1024/768/?img=1005">
+                    <img src="http://unsplash.it/3440/1440/?img=1005">
+                </picture>
+            </div>
+            <!-- pause/unpause button -->
+             <div class="pause-unpause-button"><img src="img/pause.png"></div>
+        </div>
+       
+    </body>
+</html>
