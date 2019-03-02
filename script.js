@@ -137,7 +137,6 @@ $(document).ready(function(){
        }
    });
    $(pauseButton).click(function(){
-       console.log(this);
        $(this).attr('src', ($(this).attr('src') == 'img/pause.png' ? 'img/unpause.png' : 'img/pause.png'));
        $(this).attr('src') == 'img/pause.png' ? enableLoop() : clearInterval(loop);
    });
